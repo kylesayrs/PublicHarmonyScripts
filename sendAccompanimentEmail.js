@@ -26,7 +26,7 @@ function sendAccompanimentEmail(event) {
 
     if (wantsAccompanimentItem) {
       const wantsAccompanimentResponse = event.response.getResponseForItem(wantsAccompanimentItem)
-      if (wantsAccompanimentResponse && wantsAccompanimentResponse.getResponse().toLowerCase() == "yes") {
+      if (wantsAccompanimentResponse && wantsAccompanimentResponse.getResponse().toLowerCase().includes("yes")) {
         const emailBody = formResponseToString(event.response)
         sendMailToRecipients(RECIPIENTS, "Musical Accompaniment Request", emailBody)
       }
