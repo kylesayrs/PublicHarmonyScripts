@@ -1,7 +1,5 @@
 ACCOMPANIMENT_KEYWORD = "accompaniment"
-RECIPIENTS = [
-  "kylesayrs@gmail.com"
-]
+RECIPIENTS = []
 
 
 function sendMailToRecipients(recipients, subject, body) {
